@@ -18,6 +18,7 @@
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <a href="Resume.pdf" target="_blank" rel="noopener" class="resume-link">Resume</a>
       </div>
     </nav>
 
@@ -92,13 +93,13 @@
       <h2>My Projects</h2>
       <div class="services-grid">
         <div class="service-box">
-          <a href="https://github.com/jakehamacher" target="_blank" class="service-link">
+          <a href="https://github.com/jakehamacher/homelab" target="_blank" class="service-link">
             <h3>🏠 Home Lab Deployment</h3>
             <p>Docker-hosted infrastructure with Cloudflare Tunnel & hardened TLS routing.</p>
           </a>
         </div>
         <div class="service-box">
-          <a href="https://github.com/jakehamacher" target="_blank" class="service-link">
+          <a href="https://github.com/jakehamacher/honeypot" target="_blank" class="service-link">
             <h3>🍯 AWS Honeypot Project</h3>
             <p>Simulated cloud vulnerabilities to analyze attacker behavior in real time.</p>
           </a>
@@ -259,11 +260,11 @@
         velocityX = mouseX - prevX;
         velocityY = mouseY - prevY;
 
-        // Predict position (optional)
+        // Predict position
         let predictedX = mouseX + velocityX;
         let predictedY = mouseY + velocityY;
 
-        // Move cursor (you can use predictedX/Y instead of mouseX/Y if you want)
+        // Move cursor
         cursor.style.transform = `translate(${predictedX}px, ${predictedY}px)`;
 
         // Save current as previous for next frame

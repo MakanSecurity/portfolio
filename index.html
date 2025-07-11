@@ -13,21 +13,42 @@
 <body>
   <header class="bg-primary text-textLight">
     <nav class="navbar container">
-      <a href="#index"><img src="Portrait.png" class="logo"></a>
+      <a href="#index" class="logo-link">
+        <img src="Portrait.png" class="logo" alt="Jake Hamacher portrait">
+        <span class="logo-text">Jake Hamacher</span>
+      </a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <a href="Resume.pdf" target="_blank" rel="noopener" class="resume-link">Resume</a>
+        <a href="Resume.pdf" target="_blank" rel="noopener" class="resume-link">Resume ↗</a>
       </div>
+      <button class="menu-icon" aria-label="Menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
     </nav>
 
     <section id="index" class="hero container">
-      <h1 class="hero-title">Jake Hamacher | Turning Risk Into Readiness</h1>
-      <p class="hero-subtitle">
-        Cybersecurity Analyst & Full-Stack Developer focused on keeping organizations resilient and ready.
-      </p>
-      <a href="#contact" class="cta-button">📬 Get in Touch</a>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="hero-title-line">Turning Risk</span>
+          <span class="hero-title-line">Into Readiness</span>
+        </h1>
+        <p class="hero-subtitle">
+          Cybersecurity Analyst & Full-Stack Developer focused on keeping organizations resilient and ready.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="cta-button">📬 Get in Touch</a>
+          <a href="#projects" class="secondary-button">View Projects ↓</a>
+        </div>
+      </div>
+      <div class="hero-decoration">
+        <div class="decoration-circle"></div>
+        <div class="decoration-circle"></div>
+        <div class="decoration-circle"></div>
+      </div>
     </section>
   </header>
   <main>
@@ -289,5 +310,3 @@
     }); 
   </script>
 </body>
-
-</html>

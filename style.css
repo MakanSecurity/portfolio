@@ -1,14 +1,16 @@
 :root {
     /* Dark Mode Colors */
-    --background-color: #0b0c10;
-    --text-color: #fff;
-    --primary-color: #1f41a3;
-    --secondary-background: #1c1e23;
-    --hover-color: #2c59cb;
-    --shadow-color-rgb: 30, 144, 255;
-    --border-color: #ccc;
+    --background-color: #0a0a12;
+    --text-color: #f8f9fa;
+    --primary-color: #4361ee;
+    --secondary-background: rgba(30, 33, 57, 0.6);
+    --hover-color: #3a56d5;
+    --shadow-color-rgb: 67, 97, 238;
+    --border-color: rgba(255,255,255,0.1);
     --close-btn-color: #aaa;
-    --carousel-arrow-bg: #2c59cb;
+    --carousel-arrow-bg: #4361ee;
+    --glass-blur: 12px;
+    --glass-border: 1px solid rgba(255,255,255,0.1);
 }
 
 .light-mode {
@@ -89,12 +91,31 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    padding: 1rem 0;
-    background-color: var(--background-color);
-    border-radius: 5px;
-    justify-content: flex-start;
-    position: relative;
-    transition: background-color 0.5s ease;
+    padding: 1.5rem 0;
+    background-color: rgba(10, 10, 18, 0.8);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-bottom: var(--glass-border);
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.5s ease;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.logo-text {
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1.2rem;
 }
 
 .navbar .logo {
@@ -129,14 +150,103 @@ body {
 }
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("code.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    padding: 4rem 2rem;
-    text-align: center;
+    background: linear-gradient(135deg, #0a0a12 0%, #1a1a2e 100%);
+    padding: 12rem 2rem 8rem;
     position: relative;
-    transition: color 0.5s ease;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.hero-title-line {
+    display: block;
+    background: linear-gradient(90deg, #fff 0%, #b8c2ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.9;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.secondary-button {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    background: rgba(67, 97, 238, 0.1);
+}
+
+.hero-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(67, 97, 238, 0.1);
+    filter: blur(60px);
+}
+
+.decoration-circle:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+}
+
+.decoration-circle:nth-child(2) {
+    width: 400px;
+    height: 400px;
+    bottom: -150px;
+    right: -100px;
+}
+
+.decoration-circle:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .light-mode header {
@@ -286,12 +396,19 @@ header p {
 }
 
 .service-box {
-    /* background-color: var(--secondary-background); */
-    padding: 1.5rem;
-    border-radius: 8px;
+    background: var(--secondary-background);
+    padding: 2rem;
+    border-radius: 16px;
     text-align: center;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.5s ease;
+    border: var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(var(--shadow-color-rgb), 0.1), 0 10px 10px -5px rgba(var(--shadow-color-rgb), 0.04);
 }
 
 .service-box h3 {

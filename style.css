@@ -1,45 +1,72 @@
 :root {
-    /* Dark Mode Colors */
-    --background-color: #0a0a12;
+    /* Modern Color Scheme */
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --accent-color: #ff6b6b;
+    --hover-color: #0b5ed7;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --transition: all 0.2s ease;
+}
+
+.dark-mode {
+    --background-color: #212529;
     --text-color: #f8f9fa;
-    --primary-color: #4361ee;
-    --secondary-background: rgba(30, 33, 57, 0.6);
-    --hover-color: #3a56d5;
-    --shadow-color-rgb: 67, 97, 238;
-    --border-color: rgba(255,255,255,0.1);
-    --close-btn-color: #aaa;
-    --carousel-arrow-bg: #4361ee;
-    --glass-blur: 12px;
-    --glass-border: 1px solid rgba(255,255,255,0.1);
+    --primary-color: #4dabf7;
+    --secondary-color: #adb5bd;
+    --accent-color: #ff8787;
+    --hover-color: #339af0;
+    --card-bg: #2b3035;
+    --border-color: #495057;
+    --shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-.light-mode {
-    /* Light Mode Colors */
-    --background-color: #ffffff;
-    --text-color: #111111;
-    --primary-color: #0033cc;
-    --secondary-background: #f5f7fa;
-    --hover-color: #001a66;
-    --shadow-color-rgb: 0, 51, 204;
-    --border-color: #222;
-    --close-btn-color: #222;
-    --carousel-arrow-bg: #0033cc;
-}
-
-html, body {
-    height: 100%;
-    min-height: 100%;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--text-color);
     background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    line-height: 1.6;
+    transition: var(--transition);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.2;
+    margin-top: 0;
+    font-weight: 600;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 0;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
 }
 
 #container {

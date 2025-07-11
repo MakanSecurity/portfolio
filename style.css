@@ -956,6 +956,7 @@ select:focus {
 textarea {
     min-height: 150px;
     resize: vertical;
+    border: 2px solid var(--border);
 }
 
 label {

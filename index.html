@@ -11,39 +11,41 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="container">
-        <a href="#index" class="logo">
-          <img src="Portrait.png" width="48" height="48" alt="Jake Hamacher" class="logo-img">
-          <span>Jake Hamacher</span>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__container">
+        <a href="#index" class="nav__logo">
+          <img src="Portrait.png" width="48" height="48" alt="Jake Hamacher" class="nav__logo-img">
+          <span class="nav__logo-text">Jake Hamacher</span>
         </a>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-          <a href="Resume.pdf" target="_blank" class="btn btn-outline">Resume ↗</a>
+        <div class="nav__links">
+          <a href="#about" class="nav__link">About</a>
+          <a href="#projects" class="nav__link">Projects</a>
+          <a href="#contact" class="nav__link">Contact</a>
+          <a href="Resume.pdf" target="_blank" class="nav__resume">Resume ↗</a>
         </div>
-        <button class="menu-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="nav__toggle" aria-label="Toggle menu">
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
         </button>
       </div>
     </nav>
 
     <section id="index" class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1>Turning Risk<br>Into Readiness</h1>
-          <p class="lead">
-            Cybersecurity Analyst & Full-Stack Developer focused on keeping organizations resilient and ready.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Get in Touch</a>
-            <a href="#projects" class="btn btn-link">View Projects</a>
-          </div>
+      <div class="hero__content">
+        <h1 class="hero__title">Turning Risk<br>Into Readiness</h1>
+        <p class="hero__subtitle">
+          Cybersecurity Analyst & Full-Stack Developer focused on keeping organizations resilient and ready.
+        </p>
+        <div class="hero__cta">
+          <a href="#contact" class="hero__btn hero__btn--primary">Get in Touch</a>
+          <a href="#projects" class="hero__btn hero__btn--secondary">View Projects</a>
         </div>
+      </div>
+      <div class="hero__decoration">
+        <div class="hero__circle hero__circle--1"></div>
+        <div class="hero__circle hero__circle--2"></div>
       </div>
     </section>
   </header>

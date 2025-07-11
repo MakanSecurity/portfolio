@@ -5,9 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jake Hamacher | Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Critical CSS */
+    .nav, .hero__content { opacity: 1 !important; }
+    body { overflow-x: hidden; }
+  </style>
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'" />
+  <link rel="preload" href="Portrait.png" as="image">
   <link rel="icon" href="Portrait.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
 </head>
 
 <body>
@@ -15,7 +21,7 @@
     <nav class="nav">
       <div class="nav__container">
         <a href="#index" class="nav__logo">
-          <img src="Portrait.png" width="48" height="48" alt="Jake Hamacher" class="nav__logo-img">
+          <img src="Portrait.png" width="48" height="48" alt="Jake Hamacher" class="nav__logo-img" loading="lazy" decoding="async">
           <span class="nav__logo-text">Jake Hamacher</span>
         </a>
         <div class="nav__links">
@@ -202,7 +208,9 @@
   </footer>
 
   <script>
+    // Defer non-critical JS
     document.addEventListener('DOMContentLoaded', () => {
+        requestIdleCallback(() => {
       // Mobile menu toggle
       const navToggle = document.querySelector('.nav__toggle');
       const navLinks = document.querySelector('.nav__links');
@@ -262,6 +270,7 @@
       updateThemeIcon();
 
       themeToggleBtn.addEventListener('click', () => {
+        requestAnimationFrame(() => {
         if (body.classList.contains('dark-mode')) {
           body.classList.remove('dark-mode');
           body.classList.add('light-mode');

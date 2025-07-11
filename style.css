@@ -350,6 +350,8 @@ h3 { font-size: 1.5rem; }
     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
     color: white;
     overflow: hidden;
+    contain: paint; /* Improves rendering performance */
+    will-change: transform; /* Optimizes animations */
 }
 
 .hero__content {
@@ -423,8 +425,8 @@ h3 { font-size: 1.5rem; }
     position: absolute;
     border-radius: 50%;
     background: rgba(255,255,255,0.1);
-    filter: blur(60px);
-    z-index: 9999;
+    will-change: transform; /* Optimizes animations */
+    z-index: 1;
 }
 
 .hero__circle--1 {
@@ -1096,8 +1098,10 @@ button:hover {
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
     padding: 1.5rem 1rem;
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s, background-color 0.5s ease;
+    will-change: transform;
+    contain: content;
     scroll-snap-align: center;
+    transition: none; /* Remove complex transitions */
 }
 
 .carousel li:hover {

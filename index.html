@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jake Hamacher | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Portrait.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="bg-primary text-textLight">
+    <nav class="navbar container">
+      <a href="#index"><img src="Portrait.png" class="logo"></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="Resume.pdf" target="_blank" rel="noopener" class="resume-link">Resume</a>
+      </div>
+    </nav>
+
+    <section id="index" class="hero container">
+      <h1 class="hero-title">Jake Hamacher | Turning Risk Into Readiness</h1>
+      <p class="hero-subtitle">
+        Cybersecurity Analyst & Full-Stack Developer focused on keeping organizations resilient and ready.
+      </p>
+      <a href="#contact" class="cta-button">📬 Get in Touch</a>
+    </section>
+  </header>
+  <main>
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I’m Jake Hamacher—Cybersecurity Analyst and Full-Stack Developer with a background in Christian philosophy and a
+        deep passion for securing digital systems. I thrive on solving complex problems, analyzing real-world threats,
+        and building applications that are both functional and resilient.
+      </p>
+      <section id="skills" class="section">
+        <h2>Background Quick Facts</h2>
+        <div class="stats-container">
+          <div class="stat-box">
+            <h3>CompTIA Sec+</h3>
+            <p>Industry-recognized certification validating core security knowledge</p>
+          </div>
+
+          <div class="stat-box">
+            <h3>Cloud & Containers</h3>
+            <p>Hands-on with AWS, Docker, and virtualized lab environments</p>
+          </div>
+
+          <div class="stat-box">
+            <h3>Threat Analysis</h3>
+            <p>Captured and dissected real-world intrusion data from honeypots and logs</p>
+          </div>
+
+          <div class="stat-box">
+            <h3>Full-Stack Development</h3>
+            <p>Building production-ready apps with Java, Vaadin, React, and SQL</p>
+          </div>
+
+          <div class="stat-box">
+            <h3>Network Hardening</h3>
+            <p>Configured TLS routing, firewall rules, and DNSSEC for resilient infra</p>
+          </div>
+
+          <div class="stat-box">
+            <h3>Vulnerability Assessments</h3>
+            <p>Discovered and reported critical flaws in academic and enterprise networks</p>
+          </div>
+
+          <div class="stat-box">
+            <h3>Security Toolkit</h3>
+            <p>Proficient in Burp Suite, Nessus, Metasploit, Nmap, and custom tools</p>
+          </div>
+
+          <div class="stat-box">
+            <h3>Cloud Lab Architecture</h3>
+            <p>Designed secure, self-hosted environments using reverse proxies and tunneling</p>
+          </div>
+
+          <div class="stat-box">
+            <h3>DevOps Integration</h3>
+            <p>Deployed and monitored containerized apps across AWS and GCP ecosystems</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>My Projects</h2>
+      <div class="services-grid">
+        <div class="service-box">
+          <a href="https://github.com/jakehamacher/homelab" target="_blank" class="service-link">
+            <h3>🏠 Home Lab Deployment</h3>
+            <p>Docker-hosted infrastructure with Cloudflare Tunnel & hardened TLS routing.</p>
+          </a>
+        </div>
+        <div class="service-box">
+          <a href="https://github.com/jakehamacher/honeypot" target="_blank" class="service-link">
+            <h3>🍯 AWS Honeypot Project</h3>
+            <p>Simulated cloud vulnerabilities to analyze attacker behavior in real time.</p>
+          </a>
+        </div>
+        <div class="service-box">
+          <a href="https://github.com/JakeHamacher/FathersOfTheFaith" target="_blank" class="service-link">
+            <h3>📜 Church Docs Explorer</h3>
+            <p>Java + Vaadin application for browsing early church writings.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="strengths" class="section">
+      <h2>Why Work With Me</h2>
+      <div id="caro">
+        <button class="prev-btn">&lt;</button>
+        <ul class="carousel">
+          <li>
+            <h3>Real-World Practice</h3>
+            <p>I don’t just study theory—I deploy, break, and secure real systems.</p>
+          </li>
+          <li>
+            <h3>Balanced Approach</h3>
+            <p>Blending offensive security techniques with strong defensive engineering.</p>
+          </li>
+          <li>
+            <h3>Clear Communication</h3>
+            <p>Whether working with devs or execs, I translate risk into action.</p>
+          </li>
+          <li>
+            <h3>Faith & Purpose</h3>
+            <p>I build with integrity, guided by my values and belief in meaningful work.</p>
+          </li>
+          <li>
+            <h3>Always Learning</h3>
+            <p>My passion for cybersecurity never stands still—and neither do I.</p>
+          </li>
+        </ul>
+        <button class="next-btn">&gt;</button>
+      </div>
+      <div class="section">
+        <h2>Let’s Build Security Together</h2>
+        <p>Looking for a creative, committed, and technically sound cybersecurity partner?</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-container">
+      <h2>Get in Touch</h2>
+      <p>Have a question or want to collaborate? Drop me a message—I’ll respond promptly.</p>
+      <form action="https://formsubmit.co/8a136d6c522a39003c79826ef9686308" method="POST">
+        <div>
+          <label for="name">Name</label><br />
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div>
+          <label for="email">Email</label><br />
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+          <label for="subject">Subject</label><br />
+          <input type="text" id="subject" name="subject" />
+        </div>
+        <div>
+          <label for="message">Message</label><br />
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" id="send-btn">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+  <footer>
+    <div id="popup-stuff">
+      <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <span id="theme-icon" aria-hidden="true">🌙 Toggle Theme</span>
+      </button>
+    </div>
+
+    <p>&copy; 2025 Jake Hamacher. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.querySelector('.carousel');
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+
+      prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({
+          left: -300,
+          behavior: 'smooth'
+        });
+      });
+
+      nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({
+          left: 300,
+          behavior: 'smooth'
+        });
+      });
+
+      // ========== Theme Toggle Logic ==========
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const body = document.body;
+
+      // Check for a saved theme preference in localStorage
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        body.classList.add(savedTheme);
+      } else {
+        // Default to dark mode if no preference is saved
+        body.classList.add('dark-mode');
+      }
+
+      const themeIcon = document.getElementById('theme-icon');
+      function updateThemeIcon() {
+        if (body.classList.contains('dark-mode')) {
+          themeIcon.textContent = 'Toggle Theme 🌙';
+        } else {
+          themeIcon.textContent = 'Toggle Theme ☀️';
+        }
+      }
+      updateThemeIcon();
+
+      themeToggleBtn.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          body.classList.add('light-mode');
+          localStorage.setItem('theme', 'light-mode');
+        } else {
+          body.classList.remove('light-mode');
+          body.classList.add('dark-mode');
+          localStorage.setItem('theme', 'dark-mode');
+        }
+        updateThemeIcon();
+      });
+
+      // ========== Custom Cursor Logic ==========
+      let cursor = document.querySelector('.custom-cursor');
+      if (!cursor) {
+        cursor = document.createElement('div');
+        cursor.className = 'custom-cursor';
+        document.body.appendChild(cursor);
+      }
+
+      let mouseX = 0, mouseY = 0;
+      let prevX = 0, prevY = 0;
+      let velocityX = 0, velocityY = 0;
+
+      document.addEventListener('pointermove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      function animateCursor() {
+        // Calculate velocity
+        velocityX = mouseX - prevX;
+        velocityY = mouseY - prevY;
+
+        // Predict position
+        let predictedX = mouseX + velocityX;
+        let predictedY = mouseY + velocityY;
+
+        // Move cursor
+        cursor.style.transform = `translate(${predictedX}px, ${predictedY}px)`;
+
+        // Save current as previous for next frame
+        prevX = mouseX;
+        prevY = mouseY;
+
+        requestAnimationFrame(animateCursor);
+      }
+
+      requestAnimationFrame(animateCursor);
+
+      document.querySelectorAll('a, button, .prev-btn, .next-btn, [command="show-modal"], .service-box, .stat-box, .service-link, input, textarea').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover', 'cursor-active'));
+        el.addEventListener('mousedown', () => cursor.classList.add('cursor-active'));
+        el.addEventListener('mouseup', () => cursor.classList.remove('cursor-active'));
+        el.addEventListener('click', () => {
+          cursor.classList.add('cursor-click');
+          setTimeout(() => cursor.classList.remove('cursor-click'), 100);
+        });
+      });
+    }); 
+  </script>
+</body>
+
+</html>

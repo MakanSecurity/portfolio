@@ -270,7 +270,7 @@ h3 { font-size: 1.5rem; }
 .hero {
     position: relative;
     padding: 12rem 2rem;
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -351,6 +351,7 @@ h3 { font-size: 1.5rem; }
     border-radius: 50%;
     background: rgba(255,255,255,0.1);
     filter: blur(60px);
+    z-index: 9999;
 }
 
 .hero__circle--1 {
@@ -876,6 +877,7 @@ textarea:focus {
 
 textarea {
     min-height: 150px;
+    border: 1px solid var(--primary);
 }
 
 button {
@@ -1093,77 +1095,4 @@ button:hover {
     width: 6px;
     border: var(--secondary-background) 1px solid;
     transition: background 0.5s ease, border-color 0.5s ease;
-}
-
-/* Cursor Styles */
-body {
-  cursor: none;
-}
-
-a, a:hover, a:focus,
-button,
-button:hover,
-button:focus,
-.prev-btn,
-.next-btn,
-[command="show-modal"],
-[command="show-modal"]:hover,
-[command="show-modal"]:focus,
-.blog-post,
-input,
-textarea {
-    cursor: none !important;
-}
-
-dialog[open],
-dialog[open] * {
-    cursor: auto !important;
-}
-
-.custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    background: var(--primary-color);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 2147483648;
-    transform: translate(-50%, -50%);
-    transition: background 0.3s, transform 0.08s, border-color 0.3s;
-    border: var(--secondary-background) 1px solid;
-}
-
-/* Custom Cursor States */
-.custom-cursor.cursor-hover {
-    background: transparent;
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 0 12px rgba(var(--shadow-color-rgb), 0.53), 0 0 0 4px var(--secondary-background);
-    transform: translate(-50%, -50%) scale(1.5);
-    transition: background 0.3s, transform 0.08s, box-shadow 0.3s, border-color 0.3s;
-}
-
-.custom-cursor:not(.cursor-hover):not(.cursor-active):not(.cursor-click) {
-    background: var(--primary-color);
-    border: 1px solid var(--secondary-background);
-    box-shadow: none;
-    transform: translate(-50%, -50%) scale(1);
-    transition: background 0.3s, transform 0.08s, box-shadow 0.3s, border-color 0.3s;
-}
-
-.custom-cursor.cursor-active {
-    background: var(--hover-color);
-    border: 2px solid var(--primary-color);
-    transform: translate(-50%, -50%) scale(0.85);
-    box-shadow: 0 0 16px rgba(var(--shadow-color-rgb), 0.23);
-    transition: background 0.3s, transform 0.08s, box-shadow 0.3s, border-color 0.3s;
-}
-
-.custom-cursor.cursor-click {
-    background: var(--text-color); /* White in dark mode, but changes with text-color for light mode */
-    border: 2px solid var(--primary-color);
-    transform: translate(-50%, -50%) scale(1.8);
-    box-shadow: 0 0 24px rgba(var(--shadow-color-rgb), 0.73);
-    transition: background 0.05s, transform 0.05s, box-shadow 0.05s, border-color 0.05s;
 }

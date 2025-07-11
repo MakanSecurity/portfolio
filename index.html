@@ -256,55 +256,6 @@
         }
         updateThemeIcon();
       });
-
-      // ========== Custom Cursor Logic ==========
-      let cursor = document.querySelector('.custom-cursor');
-      if (!cursor) {
-        cursor = document.createElement('div');
-        cursor.className = 'custom-cursor';
-        document.body.appendChild(cursor);
-      }
-
-      let mouseX = 0, mouseY = 0;
-      let prevX = 0, prevY = 0;
-      let velocityX = 0, velocityY = 0;
-
-      document.addEventListener('pointermove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-      });
-
-      function animateCursor() {
-        // Calculate velocity
-        velocityX = mouseX - prevX;
-        velocityY = mouseY - prevY;
-
-        // Predict position
-        let predictedX = mouseX + velocityX;
-        let predictedY = mouseY + velocityY;
-
-        // Move cursor
-        cursor.style.transform = `translate(${predictedX}px, ${predictedY}px)`;
-
-        // Save current as previous for next frame
-        prevX = mouseX;
-        prevY = mouseY;
-
-        requestAnimationFrame(animateCursor);
-      }
-
-      requestAnimationFrame(animateCursor);
-
-      document.querySelectorAll('a, button, .prev-btn, .next-btn, [command="show-modal"], .service-box, .stat-box, .service-link, input, textarea').forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover', 'cursor-active'));
-        el.addEventListener('mousedown', () => cursor.classList.add('cursor-active'));
-        el.addEventListener('mouseup', () => cursor.classList.remove('cursor-active'));
-        el.addEventListener('click', () => {
-          cursor.classList.add('cursor-click');
-          setTimeout(() => cursor.classList.remove('cursor-click'), 100);
-        });
-      });
     }); 
   </script>
 </body>

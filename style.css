@@ -352,6 +352,8 @@ h3 { font-size: 1.5rem; }
     overflow: hidden;
     contain: paint; /* Improves rendering performance */
     will-change: transform; /* Optimizes animations */
+    transform: translate3d(0,0,0); /* Force hardware acceleration */
+    isolation: isolate; /* Creates new stacking context */
 }
 
 .hero__content {
@@ -425,8 +427,10 @@ h3 { font-size: 1.5rem; }
     position: absolute;
     border-radius: 50%;
     background: rgba(255,255,255,0.1);
-    will-change: transform; /* Optimizes animations */
+    filter: blur(60px);
+    will-change: transform, filter; /* Optimizes animations */
     z-index: 1;
+    backface-visibility: hidden; /* Improves blur performance */
 }
 
 .hero__circle--1 {
@@ -1203,16 +1207,22 @@ button:hover {
 
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
-    width: 8px;
-    background: var(--background-color);
-    border-radius: 6px;
-    transition: background 0.5s ease;
+    width: 12px;
+    background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 8px;
-    width: 6px;
-    border: var(--secondary-background) 1px solid;
-    transition: background 0.5s ease, border-color 0.5s ease;
+    background: var(--primary);
+    border-radius: 6px;
+    border: 3px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Firefox scrollbar */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--background);
 }
